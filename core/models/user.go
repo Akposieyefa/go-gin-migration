@@ -35,3 +35,13 @@ type UserUpdatePayload struct {
 	Email       string `json:"email" validate:"required"`
 	PhoneNumber string `json:"phoneNumber" validate:"required"`
 }
+
+type UserPasswordChangePayload struct {
+	Password             string `json:"password" validate:"required"`
+	PasswordConfirmation string `json:"password_confirmation" validate:"required"`
+}
+
+type UserLogin struct {
+	Email    string `json:"email" validate:"required"`
+	Password string `json:"password" validate:"required"`
+}
